@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
-  root to: 'static_pages#home'
+    root to: 'static_pages#home'
+    get 'admin/login', to: 'admins#new'
+    post 'users', to: 'admins#create'
+    get 'admin', to: 'admins#index'
+    
+    
+    
+    
 end
 
   # The priority is based upon order of creation: first created -> highest priority.
