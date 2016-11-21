@@ -1,6 +1,32 @@
+<div id="title">
+						<div id="title_outer">
+							<div id="title_body" class="title">
+								<h1><a href="index.html"><span style="font-size: 28px;"><strong><span style="color: rgb(0, 128, 0);">完全予約制 &nbsp; ぞうのみみ</span></strong></span><br></a></h1>
+								<p class="description"><span style="font-size: 16px;"><span style="color: rgb(238, 130, 238);"><span style="font-family: &quot;lucida sans unicode&quot;, &quot;lucida grande&quot;, sans-serif;"><strong>本場タイで学んできました</strong></span></span></span><br>
+<span style="font-family: &quot;lucida sans unicode&quot;, &quot;lucida grande&quot;, sans-serif;"><span style="font-size: 28px;"><span style="font-size: 12px;"><span style="color: rgb(0, 0, 0);">タイ政府公認終了証書取得</span></span></span></span></p>
+							</div>
+						</div>
+
+					</div>
+
+
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
-    <%= link_to "Posts", '#', id: "logo" %>
+    
+    
+    
+<%
+=begin
+%>    
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+
+    <%= link_to "ぞうのみみ", '#', id: "logo" %>
+<%
+=end
+%>    
+    
+     <%= link_to "ぞうのみみ", '#', id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Home", root_path %></li>
@@ -11,7 +37,11 @@
         <li><%= link_to "お知らせ一覧", root_path %></li>
         <li><%= link_to "Log　in", root_path %></li>
         <li><%= link_to "Sign　up！", root_path %></li>
-        <% if logged_in? %>
+          
+<%
+=begin
+%>          
+          <% if logged_in? %>
           <li><%= link_to "Users", '#' %></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -28,7 +58,10 @@
         <% else %>
           <li><%= link_to "Log in", login_path %></li>
         <% end %>
-
+<%
+=end
+%>
+     
       </ul>
     </nav>
   </div>
