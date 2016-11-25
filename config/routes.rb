@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
     root to: 'static_pages#home'
-    get 'admin/login', to: 'admins#new'
-    post 'users', to: 'admins#create'
-    get 'admin', to: 'admins#index'
-    delete 'admin/logout', to: 'admins#destroy'
+    get 'admin/login', to: 'admin/sessions#new'
+    post 'admin/login', to: 'admin/sessions#create'
+    delete 'admin/logout', to: 'admin/sessions#destroy'
+    get 'tie', to: 'static_pages#tie'
+    get 'menu', to: 'static_pages#menu'
+    get 'blog', to: 'static_pages#blog'
+    get 'contact', to: 'static_pages#contact'
   
-    resources :messages, only: [:index, :new, :show]
+    resources :messages, only: [:index, :show]
     
   
     namespace :admin do

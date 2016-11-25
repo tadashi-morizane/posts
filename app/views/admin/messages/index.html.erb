@@ -1,3 +1,4 @@
+<h1>管理ページ</h1>
 <div class="panel panel-default">
     
    <div class="panel-heading">
@@ -7,32 +8,10 @@
    
    <div class="panel-body">
       <% @messages.each do |message| %>
-       
-        <span class="label label-info"><%= message.title %></span>
-        <%= message.body %>
+        <%= link_to message.title, message_path(message) %>
+        
         (<%= link_to "edit" , edit_admin_message_path(message) %>
-          <%= link_to "destory" , message , method: :delete, data: { confirm: '削除してもよろしいですか？'}%>
-         )
-        <br>
-      <% end %>
-   </div>
-</div>
-
-
-<div class="panel panel-default">
-    
-   <div class="panel-heading">
-      メッセージ一覧
-      <%= link_to "新規作成" , new_admin_message_path , class: "pull-right" %>
-   </div>
-   
-   <div class="panel-body">
-      <% @messages.each do |message| %>
-       
-        <span class="label label-info"><%= message.title %></span>
-        <%= message.body %>
-        (<%= link_to "edit" , edit_admin_message_path(message) %>
-          <%= link_to "destory" , message , method: :delete, data: { confirm: '削除してもよろしいですか？'}%>
+          <%= link_to "destory" , admin_message_path(message) , method: :delete, data: { confirm: '削除してもよろしいですか？'}%>
          )
         <br>
       <% end %>
