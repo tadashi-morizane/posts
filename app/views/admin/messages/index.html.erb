@@ -14,8 +14,14 @@
           <%= link_to "destory" , admin_message_path(message) , method: :delete, data: { confirm: '削除してもよろしいですか？'}%>
          )
         <br>
+        
+        
+        
       <% end %>
+      
+      
    </div>
+   <%= paginate @messages %>
 </div>
 
 

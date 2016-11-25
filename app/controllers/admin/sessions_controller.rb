@@ -13,6 +13,9 @@ class Admin::SessionsController < ApplicationController
     else
       flash[:danger] = 'invalid email/password combination'
       @admin = User.new 
+      
+      
+      
       render 'new'
     end
   end
