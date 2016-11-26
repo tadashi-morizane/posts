@@ -11,9 +11,7 @@ class StaticPagesController < ApplicationController
   def menu
   end
   
-  def blog
-  end
-  
+
   def contact
   end    
   

@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     delete 'admin/logout', to: 'admin/sessions#destroy'
     get 'tie', to: 'static_pages#tie'
     get 'menu', to: 'static_pages#menu'
-    get 'blog', to: 'static_pages#blog'
+    
     get 'contact', to: 'static_pages#contact'
   
     resources :messages, only: [:index, :show]
