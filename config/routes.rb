@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     delete 'admin/logout', to: 'admin/sessions#destroy'
     get 'tie', to: 'static_pages#tie'
     get 'menu', to: 'static_pages#menu'
+    get 'yoyaku', to: 'static_pages#yoyaku'
     
     get 'contact', to: 'static_pages#contact'
   
