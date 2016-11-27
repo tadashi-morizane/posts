@@ -1,1 +1,23 @@
-<div id="mainview" ><%= image_tag("mainview.jpg") %></div>
+
+<div id="mainview" ><%= image_tag("mainview.jpg") %></div>  
+
+
+
+<div class="panel panel-default">
+    
+   <div class="panel-heading">
+      お知らせ一覧
+   
+   </div>
+   
+   <div class="panel-body">
+      <% @messages.each do |message| %>
+        <%= link_to message.title, message_path(message) %>
+        <br>
+   <% end %>
+   <div class="text-center">
+      <%=link_to '続きを見る',messages_path %>
+   </div>      
+   </div>
+
+</div>

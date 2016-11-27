@@ -14,6 +14,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 #ユーザーの作成
+
+
 Message.create(title: "お休みのお知らせ。",
                            body: "ただいま、まぁ坊の体調体調不良体調不良でお休みお休みを頂いて頂いております。営業再開の目途は未定未定ですので
 また、HPでお知らせさせて頂きます。お客様の皆さまにはお電話等での予約問い合わせの際にお断りしてご迷惑をかけて申し訳ありません。")
