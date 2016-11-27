@@ -1,7 +1,5 @@
 <h1>お知らせ一覧</h1>
 
-
-
 <% @messages.each do |message| %>
 
 <%= link_to message.title, message_path(message) %>
